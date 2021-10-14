@@ -6,15 +6,16 @@ namespace FactoryPatternExercise
 {
     public class VehicleFactory
     {
-        public IVehicle GetVehicle(string userInput)
+        public static IVehicle GetVehicle(int userInput)
         {
-            switch (userInput.ToLower())
+            switch (userInput)
             {
-                case "motorcycle":
+                case 2:
+                case 3:
                     return new Motorcycle();
-                case "suv":
+                case 4:
                     return new SUV();
-                case "car":
+                case  5:
                     return new Car();
                 default:
                     return new Car();
